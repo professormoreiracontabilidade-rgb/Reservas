@@ -8,8 +8,13 @@
 
 <style>
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial, sans-serif;
     background:#2b124c;
     color:white;
@@ -17,10 +22,13 @@ body{
 
 header{
     background:#1b0b35;
-    padding:20px;
     text-align:center;
+    padding:20px;
     font-size:28px;
     font-weight:bold;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 #progresso{
@@ -32,7 +40,7 @@ header{
     height:100%;
     width:0%;
     background:#c084fc;
-    transition:.4s;
+    transition:.5s;
 }
 
 .slide{
@@ -46,36 +54,43 @@ header{
 }
 
 h2{
-    font-size:32px;
+    font-size:34px;
     color:#d8b4fe;
+    margin-bottom:20px;
+    text-align:center;
 }
 
-p,li{
+p{
     font-size:24px;
-    line-height:1.6;
+    line-height:1.7;
+    margin-bottom:15px;
 }
 
 ul{
-    padding-left:25px;
+    padding-left:30px;
+}
+
+li{
+    font-size:24px;
+    line-height:1.8;
+    margin-bottom:8px;
 }
 
 .botoes{
-    position:fixed;
-    bottom:70px;
-    left:0;
-    right:0;
     display:flex;
     justify-content:center;
-    gap:10px;
+    gap:15px;
+    margin:30px 0;
+    flex-wrap:wrap;
 }
 
 button{
-    font-size:24px;
-    padding:15px 25px;
-    border:none;
-    border-radius:12px;
     background:#7c3aed;
     color:white;
+    border:none;
+    border-radius:12px;
+    padding:15px 25px;
+    font-size:24px;
     cursor:pointer;
 }
 
@@ -84,13 +99,11 @@ button:hover{
 }
 
 footer{
-    position:fixed;
-    bottom:0;
-    width:100%;
     background:#1b0b35;
     text-align:center;
-    padding:10px;
+    padding:15px;
     font-size:18px;
+    margin-top:20px;
 }
 
 </style>
@@ -106,14 +119,10 @@ CURSO DE CONTABILIDADE PROFESSOR MOREIRA
 <div id="barra"></div>
 </div>
 
-<!-- TELA 1 -->
-
 <div class="slide ativo">
 <h2>RESERVAS</h2>
 
-<p>
-As Reservas fazem parte do Patrimônio Líquido e podem ser classificadas em:
-</p>
+<p>As Reservas fazem parte do Patrimônio Líquido.</p>
 
 <ul>
 <li>Reserva Legal</li>
@@ -124,31 +133,20 @@ As Reservas fazem parte do Patrimônio Líquido e podem ser classificadas em:
 <li>Reserva de Lucros a Realizar</li>
 <li>Reservas de Capital</li>
 </ul>
-
 </div>
-
-<!-- TELA 2 -->
 
 <div class="slide">
 <h2>RESERVA LEGAL</h2>
 
 <ul>
-<li>5% do lucro líquido</li>
 <li>Única reserva obrigatória</li>
+<li>5% do Lucro Líquido</li>
 <li>Limite de 20% do Capital Social</li>
 <li>Protege a integridade do Capital Social</li>
+<li>Pode compensar prejuízos</li>
+<li>Pode aumentar o Capital Social</li>
 </ul>
-
-<p><b>Utilização:</b></p>
-
-<ul>
-<li>Compensar prejuízos</li>
-<li>Aumentar o capital social</li>
-</ul>
-
 </div>
-
-<!-- TELA 3 -->
 
 <div class="slide">
 <h2>RESERVAS ESTATUTÁRIAS</h2>
@@ -156,41 +154,32 @@ As Reservas fazem parte do Patrimônio Líquido e podem ser classificadas em:
 <ul>
 <li>Criadas pelo Estatuto Social</li>
 <li>Finalidade definida</li>
-<li>Critério de cálculo definido</li>
+<li>Critérios definidos</li>
 <li>Limite máximo definido</li>
 </ul>
-
 </div>
-
-<!-- TELA 4 -->
 
 <div class="slide">
 <h2>RESERVA PARA CONTINGÊNCIAS</h2>
 
 <ul>
-<li>Compensar perdas futuras</li>
-<li>Perda provável e estimável</li>
+<li>Compensa perdas futuras</li>
+<li>Perdas prováveis e estimáveis</li>
 <li>Uniformiza dividendos</li>
-<li>Pode ser revertida</li>
+<li>Deve ser revertida quando a causa desaparecer</li>
 </ul>
-
 </div>
-
-<!-- TELA 5 -->
 
 <div class="slide">
-<h2>INCENTIVOS FISCAIS</h2>
+<h2>RESERVA DE INCENTIVOS FISCAIS</h2>
 
 <ul>
-<li>Subvenções governamentais</li>
-<li>Doações para investimento</li>
+<li>Subvenções para investimentos</li>
+<li>Doações governamentais</li>
 <li>Reserva de Lucros</li>
-<li>Pode ser excluída do dividendo obrigatório</li>
+<li>Pode ser excluída da base do dividendo obrigatório</li>
 </ul>
-
 </div>
-
-<!-- TELA 6 -->
 
 <div class="slide">
 <h2>RETENÇÃO DE LUCROS</h2>
@@ -199,12 +188,9 @@ As Reservas fazem parte do Patrimônio Líquido e podem ser classificadas em:
 <li>Projeto de expansão</li>
 <li>Necessita orçamento de capital</li>
 <li>Aprovada pela Assembleia</li>
-<li>Prazo até 5 exercícios</li>
+<li>Até 5 exercícios</li>
 </ul>
-
 </div>
-
-<!-- TELA 7 -->
 
 <div class="slide">
 <h2>LUCROS A REALIZAR</h2>
@@ -212,74 +198,74 @@ As Reservas fazem parte do Patrimônio Líquido e podem ser classificadas em:
 <ul>
 <li>Evita distribuir lucro sem caixa</li>
 <li>Equivalência Patrimonial</li>
-<li>Ajustes a valor justo</li>
-<li>Lucro ainda não realizado financeiramente</li>
+<li>Ganhos ainda não realizados financeiramente</li>
+<li>Pagamento futuro de dividendos</li>
 </ul>
-
 </div>
-
-<!-- TELA 8 -->
 
 <div class="slide">
 <h2>LIMITES DAS RESERVAS</h2>
 
-<p>
-As Reservas de Lucros não podem ultrapassar o Capital Social.
-</p>
+<p>As Reservas de Lucros não podem ultrapassar o Capital Social.</p>
 
-<p>
-Exceções:
-</p>
+<p><strong>Não entram no limite:</strong></p>
 
 <ul>
-<li>Contingências</li>
-<li>Incentivos Fiscais</li>
-<li>Lucros a Realizar</li>
+<li>Reserva para Contingências</li>
+<li>Reserva de Incentivos Fiscais</li>
+<li>Reserva de Lucros a Realizar</li>
 </ul>
-
 </div>
-
-<!-- TELA 9 -->
 
 <div class="slide">
 <h2>RESERVAS DE CAPITAL</h2>
 
 <ul>
-<li>Não vêm do lucro</li>
+<li>Não surgem do lucro</li>
 <li>Não passam pela DRE</li>
-<li>Decorrem de operações com sócios</li>
+<li>Decorrem de transações com sócios</li>
 <li>Ágio na emissão de ações</li>
 <li>Bônus de subscrição</li>
+<li>Alienação de partes beneficiárias</li>
 </ul>
-
 </div>
 
-<!-- TELA 10 -->
+<div class="slide">
+<h2>UTILIZAÇÃO DAS RESERVAS DE CAPITAL</h2>
+
+<ul>
+<li>Absorção de prejuízos</li>
+<li>Compra de ações</li>
+<li>Resgate de ações</li>
+<li>Reembolso de ações</li>
+<li>Incorporação ao capital social</li>
+<li>Pagamento de dividendos preferenciais previstos</li>
+</ul>
+</div>
 
 <div class="slide">
 <h2>MACETES FGV</h2>
 
 <ul>
-<li>Legal = única obrigatória</li>
-<li>Contingência = perdas futuras</li>
-<li>Retenção = expansão</li>
-<li>Lucros a Realizar = equivalência patrimonial</li>
-<li>Incentivos = subvenções</li>
-<li>Capital ≠ Lucro</li>
+<li>Reserva Legal = Única Obrigatória</li>
+<li>Reserva Legal = 5%</li>
+<li>Reserva Legal = 20% do Capital</li>
+<li>Contingências = Perdas Futuras</li>
+<li>Retenção = Expansão</li>
+<li>Lucros a Realizar = Equivalência Patrimonial</li>
+<li>Incentivos = Subvenções</li>
+<li>Reservas de Capital ≠ Lucro</li>
 </ul>
 
-<h2>FIM</h2>
-
+<p style="text-align:center;font-size:30px;margin-top:30px;">
+🎯 FIM DO MAPA
+</p>
 </div>
 
 <div class="botoes">
-
-<button onclick="voltar()">⬅</button>
-
-<button onclick="reiniciar()">🔄</button>
-
-<button onclick="proximo()">➡</button>
-
+<button onclick="voltar()">⬅ Voltar</button>
+<button onclick="reiniciar()">🔄 Reiniciar</button>
+<button onclick="proximo()">Próximo ➡</button>
 </div>
 
 <footer>
@@ -290,30 +276,32 @@ Curso de Contabilidade Professor Moreira
 
 let atual = 0;
 
-const slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll('.slide');
 
-function mostrarSlide(n){
+function mostrarSlide(indice){
 
 slides.forEach(slide=>{
-slide.classList.remove("ativo");
+slide.classList.remove('ativo');
 });
 
-slides[n].classList.add("ativo");
+slides[indice].classList.add('ativo');
 
-let percentual = ((n+1)/slides.length)*100;
+let progresso = ((indice + 1) / slides.length) * 100;
 
-document.getElementById("barra").style.width = percentual + "%";
+document.getElementById('barra').style.width = progresso + '%';
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
 
 }
 
 function proximo(){
 
-if(atual < slides.length-1){
-
+if(atual < slides.length - 1){
 atual++;
-
 mostrarSlide(atual);
-
 }
 
 }
@@ -321,11 +309,8 @@ mostrarSlide(atual);
 function voltar(){
 
 if(atual > 0){
-
 atual--;
-
 mostrarSlide(atual);
-
 }
 
 }
@@ -333,8 +318,7 @@ mostrarSlide(atual);
 function reiniciar(){
 
 atual = 0;
-
-mostrarSlide(atual);
+mostrarSlide(0);
 
 }
 
